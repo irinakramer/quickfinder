@@ -41,10 +41,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', end
   background-position: center top;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   min-height: 500px;
   padding: 50px 0;
   position: relative;
+}
+
+.back-to-home {
+  margin: 10px;
+}
+
+.back-to-home>a {
+  text-decoration: none;
+}
+
+.back-to-home .link .material-icons {
+  font-size: 16px;
+  vertical-align: middle;
 }
 
 .full-image {
@@ -90,18 +103,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', end
   display: flex;
 }
 
-
 .qf-card {
   width: 100%;
   max-width: 330px;
 }
-/*.qf-card:hover {
-  cursor: pointer;
-}*/
+
 .qf-card .mdl-card__media,
 .qf-card .mdl-card__title,
 .qf-card__home {
-  background-color: #c8c9d0;
+  /* background-color: #c8c9d0; */
+  background-color: #e0e0e5;
   -webkit-transition: background-color 0.25s; /* Safari */
   -moz-transition: background-color 0.25s;
   -o-transition: background-color 0.25s;
@@ -110,11 +121,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', end
 .qf-card:hover .mdl-card__media,
 .qf-card:hover .mdl-card__title,
 .qf-card__home:hover {
-  background-color: #e0e0e5;
+  background-color:#eeeef2;
+  
 }
-/* .qf-card__home {
-  background: #c8c9d0;
-} */
 
 .mdl-card__supporting-text {
   background: #fff;
@@ -163,9 +172,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', end
   .mdl-layout__content {
     padding: 40px 20px;
   }
-  .quickfinder-wrapper {
-    background-image: none;
-  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -186,10 +192,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', end
     padding: 20px;
   }
 }
-
-/*.mdl-cell {
-  border: 1px solid red;
-}*/
 
 .product {
   width: auto;
