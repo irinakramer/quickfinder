@@ -1,0 +1,233 @@
+
+body { font: 12pt sans-serif; }
+
+/* visibility rules */
+
+/* all sections are off by default */
+#quickFindApp > section {
+  display:none;
+  /*visibility: hidden;*/
+}
+
+#quickFindApp.quickfinder       > section#quickfinder,
+#quickFindApp.camera           	> section#camera,
+#quickFindApp.camera-small     	> section#camera-small,
+#quickFindApp.camera-plus     	> section#camera-plus,
+#quickFindApp.camera-medium     > section#camera-medium,
+#quickFindApp.camera-large     	> section#camera-large,
+#quickFindApp.drone             > section#drone,
+#quickFindApp.drone-imaging     > section#drone-imaging,
+#quickFindApp.drone-racing      > section#drone-racing,
+#quickFindApp.drone-micro       > section#drone-micro,
+#quickFindApp.creator           > section#creator,
+#quickFindApp.laptop           	> section#laptop {
+  display:block;
+  /*visibility: visible;*/
+}
+
+#quickFindApp.camera > section#camera {
+  /*display: block;*/
+  /*visibility: visible;*/
+}
+
+.quickfinder-wrapper{
+  /* background-image: url(../images/Grand_Prismatic_Springs_converted.jpg); */
+  background: rgb(2,59,232);
+background: -moz-linear-gradient(-45deg, rgba(2,59,232,1) 0%, rgba(232,104,13,1) 100%);
+background: -webkit-linear-gradient(-45deg, rgba(2,59,232,1) 0%,rgba(232,104,13,1) 100%);
+background: linear-gradient(135deg, rgba(2,59,232,1) 0%,rgba(232,104,13,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#023be8', endColorstr='#e8680d',GradientType=1 );
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  padding: 50px 0;
+  position: relative;
+}
+
+.full-image {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.mdl-layout {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+}
+.mdl-layout__header>.mdl-layout-icon {
+  left: 20px;
+}
+.mdl-layout__header-row {
+  padding-left: 60px;
+}
+.mdl-layout__title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+}
+.mdl-layout__subtitle {
+  font-size: 18px;
+}
+.mdl-layout__content {
+  box-sizing: border-box;
+  padding: 30px 50px 50px;
+  width: 100%;
+}
+.mdl-layout__content .lead {
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+}
+.material-icons.white {
+  color: #fff;
+}
+
+.mdl-cell--stretch {
+  display: flex;
+}
+
+
+.qf-card {
+  width: 100%;
+  max-width: 330px;
+}
+/*.qf-card:hover {
+  cursor: pointer;
+}*/
+.qf-card .mdl-card__media,
+.qf-card .mdl-card__title,
+.qf-card__home {
+  background-color: #c8c9d0;
+  -webkit-transition: background-color 0.25s; /* Safari */
+  -moz-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+.qf-card:hover .mdl-card__media,
+.qf-card:hover .mdl-card__title,
+.qf-card__home:hover {
+  background-color: #e0e0e5;
+}
+/* .qf-card__home {
+  background: #c8c9d0;
+} */
+
+.mdl-card__supporting-text {
+  background: #fff;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+.mdl-card__title-text {
+  color: #333;
+  font-weight: 800;
+  -webkit-transition: color 0.25s; /* Safari */
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.mdl-card:hover .mdl-card__title-text,
+.mdl-card:hover .mdl-card__supporting-text .link {
+  color: #f8971c;
+}
+.mdl-card__actions {
+  height: 52px;
+  padding: 12px 16px;
+}
+
+.mdl-cell a {
+  text-decoration: none;
+}
+.mdl-cell.right {
+  text-align: right;
+}
+
+
+/*IE fixes*/
+.mdl-card__media img {
+  border:0;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .full-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mdl-layout__content {
+    padding: 40px 20px;
+  }
+  .quickfinder-wrapper {
+    background-image: none;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .qf-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  .card-square.mdl-card {
+    max-width: 350px;
+  }
+  .mdl-layout__header-row.quickfinder {
+    padding-left: 30px;
+  }
+  .mdl-layout__title {
+      font-size: 24px;
+  }
+  .mdl-layout__content {
+    padding: 20px;
+  }
+}
+
+/*.mdl-cell {
+  border: 1px solid red;
+}*/
+
+.product {
+  width: auto;
+  max-width: 100%;
+}
+.product .mdl-card__media {
+  background-color: inherit;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  max-width: 270px;
+  margin: auto;
+}
+.product .mdl-card__title{
+  padding-bottom: 8px;
+}
+.product .mdl-card__supporting-text {
+  padding: 8px 16px;
+}
+.link {
+  color: #f8971c;
+  white-space: nowrap;
+}
+.link .material-icons {
+  font-size: 19px;
+  vertical-align: bottom;
+}
+
+.mdl-button--raised.mdl-button--colored {
+  color: #fff;
+}
+
+.mdl-grid p {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0;
+    margin: 0 0 16px;
+}
+
